@@ -1,0 +1,40 @@
+site_name: Investigating Sleep Patterns in Dropsophila with Ethoscope Data
+site_url: https://example.com/
+nav:
+    - Abstract: index.md
+    - Introduction: introduction.md
+    - Methods: methods.md
+    - Results: results.md
+    - Discussion: discussion.md
+    - Conclusion: conclusion.md
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: blue grey
+    - scheme: slate 
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    logo: fontawesome/solid/microscope
+
+copyright: Copyright &copy; 2022 Cleo Zhang
+
+extra:
+  social:
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/meng-zhang-293b6a194/
+      name: linked
+    - icon: material/github
+      link: https://github.com/cleozhangk6
+
+      
+      
+
+markdown_extensions:
+  - attr_list
