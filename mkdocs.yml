@@ -1,12 +1,15 @@
-site_name: Investigating Sleep Patterns in Dropsophila with Ethoscope Data
-site_url: https://example.com/
+site_name: Investigating Dropsophila Sleeping Patterns with Ethoscope Data
+site_url: http://msc.bc.ic.ac.uk/~mz5318
 nav:
     - Abstract: index.md
-    - Introduction: introduction.md
-    - Methods: methods.md
-    - Results: results.md
-    - Discussion: discussion.md
-    - Conclusion: conclusion.md
+    - 1. Introduction: introduction.md
+    - 2. Data & Methods: methods.md
+    - 3. Results: results.md
+    - 4. Discussion: discussion.md
+    - 5. Conclusions: conclusion.md
+    - Ethical Considerations: ethics.md
+    - Acknowledgements: acknow.md
+
 
 theme:
   name: material
@@ -38,3 +41,4 @@ extra:
 
 markdown_extensions:
   - attr_list
+  - footnotes
