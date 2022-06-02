@@ -1,4 +1,4 @@
-site_name: Investigating Dropsophila Sleeping Patterns with Ethoscope Data
+site_name: Investigating Dropsophila Sleeping Patterns with Machine Learning
 site_url: http://msc.bc.ic.ac.uk/~mz5318
 nav:
     - Abstract: index.md
@@ -25,6 +25,10 @@ theme:
         name: Switch to light mode
   icon:
     logo: fontawesome/solid/microscope
+    admonition:
+      <type>: <icon>
+      example: octicons/beaker-16
+
 
 copyright: Copyright &copy; 2022 Cleo Zhang
 
@@ -42,3 +46,8 @@ extra:
 markdown_extensions:
   - attr_list
   - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
