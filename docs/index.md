@@ -1,6 +1,8 @@
-# Inferring Sleep Stages in *Drosophila Melanogaster* with Machine Learning
+# Inferring Sleep Stages in *Drosophila Melanogaster* with Ethoscope Data and Machine Learning
 
+Meng Zhang
 
+Supervisors: Giorgio Gilestro, Laurence Blackhurst
 
 ## Abstract
 

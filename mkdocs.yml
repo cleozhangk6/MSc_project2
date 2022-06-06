@@ -1,4 +1,4 @@
-site_name: Inferring Sleep Stages in Drosophila Melanogaster with Machine Learning
+site_name: Inferring Sleep Stages in Drosophila Melanogaster with Ethoscope Data and Machine Learning
 site_url: http://msc.bc.ic.ac.uk/~mz5318
 nav:
     - Abstract: index.md
