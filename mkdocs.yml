@@ -1,4 +1,4 @@
-site_name: Investigating Dropsophila Sleeping Patterns with Machine Learning
+site_name: Inferring Sleep Stages in Drosophila Melanogaster with Machine Learning
 site_url: http://msc.bc.ic.ac.uk/~mz5318
 nav:
     - Abstract: index.md
@@ -6,9 +6,9 @@ nav:
     - 2. Data & Methods: methods.md
     - 3. Results: results.md
     - 4. Discussion: discussion.md
-    - 5. Conclusions: conclusion.md
+    - 5. Conclusion and Future Work: conclusion.md
     - Ethical Considerations: ethics.md
-    - Acknowledgements: acknow.md
+    # - Acknowledgements: acknow.md
 
 
 theme:
@@ -28,6 +28,8 @@ theme:
     admonition:
       <type>: <icon>
       example: octicons/beaker-16
+  features:
+    - content.tooltips
 
 
 copyright: Copyright &copy; 2022 Cleo Zhang
@@ -40,10 +42,12 @@ extra:
     - icon: material/github
       link: https://github.com/cleozhangk6
 
-      
+extra_css:
+  - stylesheets/extra.css
       
 
 markdown_extensions:
+  - abbr
   - attr_list
   - footnotes
   - admonition
@@ -51,3 +55,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.snippets
