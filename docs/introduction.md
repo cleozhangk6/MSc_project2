@@ -1,14 +1,5 @@
 # 1. Introducion
 
-<!-- ??? example "Try Collapsible"
-    === "try citation"
-        This is a citation [^1].
-    === "try html"
-        <p style="color:green;"> trying html </p>
-    === "try image"
-        ![pic](img/drosophila.png)
-            *figure: drosophila* -->
-
 
 ## 1.1. Sleep Behaviours in *Drosophila Melanogaster*
 
@@ -21,23 +12,35 @@ Sleep is an important yet complex physiological process that occurs in virtually
     === "PE"
         A proboscis in insects refers to the tubular mouthpart used for feeding and sucking. Proboscis extension (PE) can either occur spontaneously or in response to antennal stimulation [(Wikipedia)](https://en.wikipedia.org/wiki/Proboscis). 
 
-Over the last few decades, the fruit fly *Drosophila Melanogaster* has been an increasingly popular model organism to understand how sleep is controlled by internal and external stimuli and how it affects other biological functions. The simplicity, cost-effectiveness, rapid developmental time, and relevance to human genetics and physiology have made *Drosophila* an indispensable tool [^6]. In most current studies, the sleeping state in *Drosophila* is  defined by a simple metric: immobility for more than five minutes, and it is often assumed to be homogenous throughout. Nevertheless, there has been increasing evidence that sleep in *Drosophila* is also a dynamic process with differing sleep intensities [^7]. Methods including EEG recordings, arousal-testing, and Proboscis Extension (PE) measurements have been used together to show that Drosophila exhibits a deep sleep stage which is characterised by  1) reduced neural activity, 2) increased immobility, 3) increased arousal threshold, and 4) stereotypical PE movement, namely the periodic extensions and retractions of the proboscis  [^8][^9]. These studies also indicated that Drosophila sleep follows a circadian rhythm, where flies sleep the most during start of the night, and it is also under homeostatic control as sleep deprivation leads to increased sleep amount and reduced sleep latency [^9]. 
+Over the last few decades, the fruit fly *Drosophila Melanogaster* has been an increasingly popular model organism to understand how sleep is regulated by internal and external stimuli and how it affects other biological functions. The simplicity, cost-effectiveness, rapid developmental time, and relevance to human genetics and physiology have made *Drosophila* an indispensable tool [^6]. In most current studies, the sleeping state in *Drosophila* is  defined by a simple metric: immobility for more than five minutes, and it is often assumed to be homogenous throughout. Nevertheless, there has been increasing evidence that sleep in *Drosophila* is also a dynamic process with differing sleep intensities [^7]. Methods including EEG recordings, arousal-testing, and Proboscis Extension (PE) measurements have been used together to show that Drosophila exhibits a deep sleep stage which is characterised by  1) reduced neural activity, 2) increased immobility, 3) increased arousal threshold, and 4) stereotypical PE movement, namely the periodic extensions and retractions of the proboscis  [^8][^9]. These studies also indicated that Drosophila sleep follows a circadian rhythm, where flies sleep the most during start of the night, and it is also under homeostatic control as sleep deprivation leads to increased sleep amount and reduced sleep latency [^9]. 
 
 In this study, we turn to a novel method of measuring Drosophila behaviours using the Ethoscope, developed in the [Gilestro lab](https://lab.gilest.ro/), which can track the movement of a single fly housed in a glass tube [^10]. This provides a simple, non-invasive, and high-throughput measurement of the external behaviour of sleep. The aim is to try and identify patterns in *Drosophila* locomotive data that can infer distinct sleep stages as indicated in previous research. 
 
 ## 1.2. The Ethoscope
-An ethoscope contains a hardware that video-records the fly in a longitudinal glass tube and a software to track its activity in real-time by applying an oval mask over the fly with machine vision algorithms (Figure 1).
+An ethoscope contains a hardware that video-records the fly in a longitudinal glass tube and a software to track its activity in real-time by applying an oval mask over the fly with machine vision algorithms (Figure 1A & 1B). The software can therefore track the X, Y coordinates, width (W) and height (H) of the oval mask, and the angle (Phi) between the line of W and the horizontal axis of the tube arena (Figure 1C). This results in five different series of values recorded over time, which are called time series, for each fly (Figure 1D). The ethoscope software also includes algorithms to calculate the maximum and mean velocities at each time point, as well as behavioural annotators to indicate whether the fly is moving, exhibiting micro-movement, or immobile at a given time point. 
+#### <p class="hide-title"> Fig1: Fly Behavioural Tracking with Ethoscope</p>
 ![pic](img/ethoscope.png)
-<p style="font-size:0.8em">Figure 1. Ethoscope</p>
-
+<p class="fig-cap">
+<b>Figure 1. Fly Behavioural Tracking with Ethoscope.</b> 
+A) Rendered drawing of an Ethoscope device. 
+B) 
+</p>
 ## 1.3. Time Series Analysis
 
+Time series analysis HCTSA
+
+#### <p class="hide-title"> Fig2: The HCTSA Workflow </p>
 ![pic](img/hctsa.png)
-<p style="font-size:0.8em">Figure 1. Ethoscope</p>
+<p class="fig-cap"> 
+<b>Figure 2. Highly Comparative Time Series Analysis (HCTSA) workflow.</b> 
+A set of time-series data is labelled and used as input dataset. HCTSA computes over 7,000 operations on each time-series data to create a MxN feature matrix (M = number of timeseries, N = number of operations). After feature extraction, statistical learning tools such as dimensionality reduction and classification algorithms can be used to analyse the data.
+</p>
 
 *[EEG]: Electroencephalogram
 *[REM]: Rapid Eye Movement
 *[PE]: Proboscis Extension
+*[HCTSA]: Highly Comparative Time Series Analysis
+
 
 
 [^1]: Blake H, Gerard RW. Brain potentials during sleep. Am J Physiol-Leg Content. 1937 Jul 31;119(4):692–703. 
