@@ -57,3 +57,4 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.snippets
   - md_in_html
+  - tables

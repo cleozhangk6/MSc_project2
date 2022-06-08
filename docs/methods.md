@@ -9,3 +9,11 @@ Data was downloaded from the remote database of the Gilestro Lab group. The data
 ## 2.3. Data Curation
 
 ## 2.4. Catch22 and HCTSA
+
+<!-- |               |             Classifier                || -->
+<!-- | Variable      | SVM     | Decision Tree | KNN          |
+| ------------  | ------- | ------------- | ------------ |
+| mean_velocity | 73.91%  | 68.15%        | 69.53%       |
+| x             | 67.89%  | 62.86%        | 59.21%       |
+| phi           | 60.91%  | 57.97%        | 57.35%       |
+| area          | 74.86%  | 71.97%        | 67.48%       | -->
