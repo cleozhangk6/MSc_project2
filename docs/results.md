@@ -93,13 +93,18 @@ To overcome these limitations, another metric for defining sleep sessions was de
 
 ### 3.3.1 Two-class classification
 
-Sleep sessions that are at least 60-min long were selected from `mean velocity` data, and the first 60-min of which were extracted. This is to allow all time series to be the same length so that classification would not rely on length-dependent features but on more intrinsic properties. A total of 991 time series (M=991) were produced; 388 of which are day-time sleep and 603 of which are night-time sleep, and they were labelled as ‘light’ or ‘dark’ accordingly. HCTSA successfully computed 5202 features (N=5202) on each time series. Thus, a 991 x 5202 (M x N) feature matrix was generated for this two-class data. 
+Sleep sessions that are at least 60-min long were selected from `mean velocity` data, and the first 60-min of which were extracted. This is to allow all time series to be the same length so that classification would not rely on length-dependent features but on more intrinsic properties. A total of 991 time series (M=991) were produced; 388 of which are day-time sleep and 603 of which are night-time sleep, and they were labelled as ‘light’ or ‘dark’ accordingly. HCTSA successfully computed 5202 features (N=5202) on each time series. Thus, a 991 x 5202 (M x N) feature matrix was generated for this two-class data. Classification on the full feature space using a 10-fold linear SVM classifier yielded a mean balanced accuracy of 73.01%. 
 
-#### <p class="hide-title">F5. PCA & T-SNE</p>
-=== "PCA"
+To visualise and examine the feature space, dimensionality reduction algorithms including principal component analysis (PCA) and t-distributed stochastic neighbour embedding (t-SNE) were employed. Two-dimensional representations by the two methods are shown in [Figure 5A & 5B](#fig5). Additionally, a linear SVM classification is performed on each dimensional space, and the individual and combined classification accuracies are indicated on the axis.  In both plots, time series data for night-time sleep (red dots) are more spread out than those for day-time sleep (blue dots). Interestingly, night-time sleep data embedded by t-SNE follows a bimodal distribution to some degree, with one of the peak positions being similar to that for day-time sleep data [(Figure 5B)](#fig5). This provides the first evidence that two types of sleep may exist: one occurs mostly at night and the other can occur at both day and night. 
+
+#### <p class="hide-title">F5. PCA & T-SNE</p><a name="fig5"></a>
+=== "A) PCA"
     <iframe src="../graph/plotPCA_24.html" class="plow"></iframe>
-=== "t-SNE"
+=== "B) t-SNE"
     <iframe src="../graph/plotTSNE_24.html" class="plow"></iframe>
+
+#### <p class="hide-title">F6. Feature Dependence</p><a name="fig6"></a>
+<iframe src="../graph/plotDepend_24.html" class="pdep"></iframe>
 
 #### <p class="hide-title">F6. Top Features</p>
 ![pic](img/plotTopFeatures_24.jpg)
@@ -116,10 +121,11 @@ Sleep sessions that are at least 60-min long were selected from `mean velocity` 
 <iframe src="../graph/plotSingle17_33.html" height="400" width="500" frameBorder="0">
 </iframe>
 
-![pic](img/plotConfuse_33.png){ width="650" }
+![pic](img/plotConfuse_33.png){ width="500" }
 
 ![pic](img/plotTopFeatures_33.jpg)
 
+![pic](img/plotFeatureMatrix_33.jpg){ width="700" }
 
 
 *[SVM]: Support Vector Machine
