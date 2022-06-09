@@ -13,7 +13,7 @@ There are six variables of interest after processing of Ethoscope data: `mean ve
     <iframe src="../graph/x_overtime.html" class="pvot"></iframe>
     <p class="fig-cap">Figure 3B. X position Over Time</p>
 === "C) phi"
-    <iframe src="../graph/Phi_overtime.html" class="pvot"></iframe>
+    <iframe src="../graph/phi_overtime.html" class="pvot"></iframe>
     <p class="fig-cap">Figure 3C. Phi Angle Over Time</p>
 === "D) w"
     <iframe src="../graph/w_overtime.html" class="pvot"></iframe>
