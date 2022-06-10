@@ -128,14 +128,15 @@ The 16 most discriminative features and their class distributions are visualized
 
 ### 3.3.2 Three-class classification
 
-Referring back to the `mean velocity` over time plot in Figure 3A, low-activity periods also occur during late-night (hour 20-22) but with a higher average velocity than the early-night sleep. It is therefore hypothesized that the two clusters seen for night-time sleep data may attribute to differences in early-night and late-night sleep. Therefore, the same dataset used in [section 3.3.2](#331-two-class-classification) are re-labelled with ‘light’, ‘dark (ZT_12-18)’ and ‘dark (ZT_18-24)’. The number of time series data for each class is 388, 477 and 126, indicating that sleep take place predominately during the first part of the night. Three-class classification using linear SVM was performed on the 991 x 5202 feature matrix, yielding a mean balanced accuracy of 58.65%. A confusion matrix was created and visualised to determine how well the labels are distinguished from one another [(Figure 9)](#fig9). It is shown that ‘dark (ZT_12-18)’ and ‘light’ are well-discerned with true-positive rates over 70%, but ‘dark (ZT_18-24)’ data is much more ambiguous. 
+Referring back to the `mean velocity` over time plot in <a href="#fig3" onclick="check('__tabbed_1_1')">Figure 3A</a>, low-activity periods also occur during late-night (hour 20-22) but with higher average velocities than early-night sleep. It is therefore hypothesized that the two clusters seen for night-time sleep data may attribute to differences in early-night and late-night sleep. Therefore, the same dataset used in [section 3.3.2](#331-two-class-classification) were re-labelled with ‘light’, ‘dark (ZT_12-18)’ and ‘dark (ZT_18-24)’. The number of time series data for each class is 388, 477 and 126, indicating that sleep take place predominately during the first part of the night. Three-class classification using linear SVM was performed on the 991 x 5202 feature matrix, yielding a mean balanced accuracy of 58.65%. A confusion matrix was created and visualised to determine how well the labels are distinguished from one another [(Figure 9)](#fig9). It is shown that ‘dark (ZT_12-18)’ and ‘light’ are well-discerned with true-positive rates over 70%, but ‘dark (ZT_18-24)’ is much more ambiguous. 
 
 #### <p class="hide-title">F9. Confusion Matrix</p><a name="fig9"></a>
 <center>
 ![pic](img/plotConfuse_33.png){ width="500" }
-<center>
+</center>
 <p class="fig-cap"><b>Figure 9. Confusion Matrix.</b></p>
 
+Low-dimensional embedding of the three-class feature space are visualized in <a onclick="check('__tabbed_3_1')">Figure 10A&nbsp;</a><a onclick="check('__tabbed_3_2')">& 10B</a>. In contrast to classification on the full feature space, ‘dark (ZT_18-24)’ data seem to be discriminable from the other two classes in low-dimensional space according to distributions in the first components of PCA and t-SNE. 
 
 #### <p class="hide-title">F10. PCA & T-SNE</p><a name="fig10"></a>
 === "A) PCA"
@@ -152,11 +153,11 @@ Referring back to the `mean velocity` over time plot in Figure 3A, low-activity 
 
 === "A) Top 16 Features"
     ![pic](img/plotTopFeatures_33.jpg)
-=== "B) Correlation Matrix of 40 Top Features "
+=== "B) Pairwise Correlation Matrix of 40 Top Features "
     ![pic](img/plotFeatureMatrix_33.jpg){ width="700" }
 
 
-#### <p class="hide-title">F11. Features of Interest</p><a name="fig11"></a>
+#### <p class="hide-title">F12. Features of Interest</p><a name="fig12"></a>
 <!-- <iframe src="../graph/plotSingle17_33.html" height="400" width="500" frameBorder="0">
 </iframe> -->
 === "A) Burstiness"
