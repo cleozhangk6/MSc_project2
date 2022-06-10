@@ -100,32 +100,47 @@ To visualise and examine the feature space, dimensionality reduction algorithms 
 #### <p class="hide-title">F5. PCA & T-SNE</p><a name="fig5"></a>
 === "A) PCA"
     <iframe src="../graph/plotPCA_24.html" class="plow"></iframe>
+    <p class="fig-cap"><b>Figure 9. Low Dimensional Representations of the Feature Space.</b> A) Principal Component Analysis. B) t-distributed Stochastic Neighbour Embedding</p>
 === "B) t-SNE"
     <iframe src="../graph/plotTSNE_24.html" class="plow"></iframe>
+
 
 #### <p class="hide-title">F6. Feature Dependence</p><a name="fig6"></a>
 <iframe src="../graph/plotDepend_24.html" class="pdep"></iframe>
 
-#### <p class="hide-title">F6. Top Features</p>
+#### <p class="hide-title">F7. Top Features</p><a name="fig7"></a>
 ![pic](img/plotTopFeatures_24.jpg)
 
 ### 3.3.2 Three-class classification
 
-#### <p class="hide-title">F5. PCA & T-SNE</p>
+#### <p class="hide-title">F8. Confusion Matrix</p><a name="fig8"></a>
+<center>
+![pic](img/plotConfuse_33.png){ width="500" }
+<center>
+
+#### <p class="hide-title">F9. PCA & T-SNE</p><a name="fig9"></a>
 === "PCA"
     <iframe src="../graph/plotPCA_33.html" class="plow"></iframe>
 === "t-SNE"
     <iframe src="../graph/plotTSNE_33.html" class="plow"></iframe>
 
 
-<iframe src="../graph/plotSingle17_33.html" height="400" width="500" frameBorder="0">
+
+
+
+#### <p class="hide-title">F10. Top Features</p><a name="fig10"></a>
+
+=== "A) Top 16 Features"
+    ![pic](img/plotTopFeatures_33.jpg)
+=== "B) Correlation Matrix of 40 Top Features "
+    ![pic](img/plotFeatureMatrix_33.jpg){ width="700" }
+
+
+#### <p class="hide-title">F11. Burstiness</p><a name="fig11"></a>
+<!-- <iframe src="../graph/plotSingle17_33.html" height="400" width="500" frameBorder="0">
+</iframe> -->
+<iframe src="../graph/plotFeatureSum17_33.html" height="500" width="1000" frameBorder="0">
 </iframe>
-
-![pic](img/plotConfuse_33.png){ width="500" }
-
-![pic](img/plotTopFeatures_33.jpg)
-
-![pic](img/plotFeatureMatrix_33.jpg){ width="700" }
 
 
 *[SVM]: Support Vector Machine
@@ -133,7 +148,7 @@ To visualise and examine the feature space, dimensionality reduction algorithms 
 *[HCTSA]: Highly Comparative Time Series Analysis
 *[Catch22]: Canonical Time-series Characteristics
 *[PCA]: Principal Component Analysis
-*[t-SNE]: t-distributed stochastic neighbour embedding
+*[t-SNE]: t-distributed Stochastic Neighbour Embedding
 
 [^14]: Cao W, Edery I. Mid-day siesta in natural populations of D. melanogaster from Africa exhibits an altitudinal cline and is regulated by splicing of a thermosensitive intron in the period clock gene. BMC Evol Biol. 2017 Jan 23;17(1):32. 
 [^9]: van Alphen B, Yap MHW, Kirszenblat L, Kottler B, van Swinderen B. A Dynamic Deep Sleep Stage in Drosophila. J Neurosci. 2013 Apr 17;33(16):6917–27. 
