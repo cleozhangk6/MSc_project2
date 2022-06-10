@@ -17,7 +17,7 @@ The Ethoscope generates five variables (X, Y, Phi, W, and H) for each recording 
 
 ### 2.3.3 Classification
 
-### 2.3.4 Feature Analysis
+### 2.3.4 Feature Interpretation
 
 
 <!-- |               |             Classifier                || -->

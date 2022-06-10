@@ -31,7 +31,6 @@ theme:
   features:
     - content.tooltips
 
-
 copyright: Copyright &copy; 2022 Meng Zhang
 
 extra:
@@ -44,6 +43,9 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
       
 
 markdown_extensions:

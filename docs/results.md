@@ -3,7 +3,10 @@
 
 ### 3.1.1 Patterns of each Variable
 
-There are six variables of interest after processing of Ethoscope data: `mean velocity` of locomotion, `x` coordinate of the oval mask centre, normalised `phi` angle as well as the width `w`, height `h`, and `area` of the mask. To intuitively look for potential characteristics of each variable, the mean and confidence interval of variable value averaged over 210 fly recordings were computed and plotted over time [(Figure 3)](#fig3). Figure 3A shows that `mean velocity` is highly cyclical, which is expected as the *Drosophila* activity level follows a circadian rhythm. Fly with a velocity value under 1 is considered to be immobile, and long periods of immobility (i.e., sleep) are typically observed during the mid-day (hour 2-9) and early-night (hour 14-18). Sleep during the day has also been seen in previous fly studies and is known as the mid-day siesta [^14]. Interestingly, the `x` and `phi` variables also display a similar pattern that has lower mean values at these sleep periods (Figure 3B-C), although the corresponding degree of uncertainty is much higher. For `w`, `h` and `area`, a sudden change in value when switching to dark is seen (Figure 3D-F). This could be the result of a technical defect as the camera becomes less capable of detecting fly boundaries in dim lighting. The overall area may be larger during night than day due to this problem. 
+There are six variables of interest after processing of Ethoscope data: `mean velocity` of locomotion, `x` coordinate of the oval mask centre, normalised `phi` angle as well as the width `w`, height `h`, and `area` of the mask. To intuitively look for potential characteristics of each variable, the mean and confidence interval of variable value averaged over 210 fly recordings were computed and plotted over time [(Figure 3)](#fig3). <a onclick="check('__tabbed_1_1')">Figure 3A</a> shows that `mean velocity` is highly cyclical, which is expected as the *Drosophila* activity level follows a circadian rhythm. Fly with a velocity value under 1 is considered to be immobile, and long periods of immobility (i.e., sleep) are typically observed during the mid-day (hour 2-9) and early-night (hour 14-18). Sleep during the day has also been seen in previous fly studies and is known as the mid-day siesta [^14]. Interestingly, the `x` and `phi` variables also display a similar pattern that has lower mean values at these sleep periods <a onclick="check('__tabbed_1_2')">(Figure 3B-C)</a>, although the corresponding degree of uncertainty is much higher. For `w`, `h` and `area`, a sudden change in value when switching to dark is seen <a onclick="check('__tabbed_1_4')">(Figure 3D-F)</a>. This could be the result of a technical defect as the camera becomes less capable of detecting fly boundaries in dim lighting. The overall area may be larger during night than day due to this problem. 
+
+<!-- <a onclick="ci('#__tabbed_1_4')">(Figure 3D-F)</a> -->
+<::before>hiii</::before>
 
 #### <p class="hide-title">F3. Variables over Time</p><a name="fig3"></a>
 === "A) mean velocity"
@@ -99,14 +102,15 @@ To visualise and examine the feature space, dimensionality reduction algorithms 
 
 #### <p class="hide-title">F5. PCA & T-SNE</p><a name="fig5"></a>
 === "A) PCA"
-    <iframe src="../graph/plotPCA_24.html" class="plow"></iframe>
-    <p class="fig-cap"><b>Figure 9. Low Dimensional Representations of the Feature Space.</b> A) Principal Component Analysis. B) t-distributed Stochastic Neighbour Embedding</p>
+    <center><iframe src="../graph/plotPCA_24.html" class="plow"></iframe></center>
+    <p class="fig-cap"><b>Figure 5. Low Dimensional Representations of the Feature Space.</b> A) Principal Component Analysis. B) t-distributed Stochastic Neighbour Embedding</p>
 === "B) t-SNE"
-    <iframe src="../graph/plotTSNE_24.html" class="plow"></iframe>
+    <center><iframe src="../graph/plotTSNE_24.html" class="plow"></iframe></center>
+    <p class="fig-cap"><b>Figure 5. Low Dimensional Representations of the Feature Space.</b> A) Principal Component Analysis. B) t-distributed Stochastic Neighbour Embedding</p>
 
 
 #### <p class="hide-title">F6. Feature Dependence</p><a name="fig6"></a>
-<iframe src="../graph/plotDepend_24.html" class="pdep"></iframe>
+<center><iframe src="../graph/plotDepend_24.html" class="pdep"></iframe></center>
 
 #### <p class="hide-title">F7. Top Features</p><a name="fig7"></a>
 ![pic](img/plotTopFeatures_24.jpg)
@@ -119,12 +123,10 @@ To visualise and examine the feature space, dimensionality reduction algorithms 
 <center>
 
 #### <p class="hide-title">F9. PCA & T-SNE</p><a name="fig9"></a>
-=== "PCA"
+=== "A) PCA"
     <iframe src="../graph/plotPCA_33.html" class="plow"></iframe>
-=== "t-SNE"
+=== "B) t-SNE"
     <iframe src="../graph/plotTSNE_33.html" class="plow"></iframe>
-
-
 
 
 
@@ -136,11 +138,21 @@ To visualise and examine the feature space, dimensionality reduction algorithms 
     ![pic](img/plotFeatureMatrix_33.jpg){ width="700" }
 
 
-#### <p class="hide-title">F11. Burstiness</p><a name="fig11"></a>
+#### <p class="hide-title">F11. Features of Interest</p><a name="fig11"></a>
 <!-- <iframe src="../graph/plotSingle17_33.html" height="400" width="500" frameBorder="0">
 </iframe> -->
-<iframe src="../graph/plotFeatureSum17_33.html" height="500" width="1000" frameBorder="0">
-</iframe>
+=== "A) Burstiness"
+    <iframe src="../graph/plotFeatureSum17_33.html" height="500" width="1000" frameBorder="0">
+    </iframe>
+=== "B) Distribution"
+    <iframe src="../graph/plotFeatureSum3262_33.html" height="500" width="1000" frameBorder="0">
+    </iframe>
+=== "C) Sliding Window"
+    <iframe src="../graph/plotFeatureSum632_33.html" height="500" width="1000" frameBorder="0">
+    </iframe>
+=== "D) Rolling Average"
+    <iframe src="../graph/plotFeatureSum6112_33.html" height="500" width="1000" frameBorder="0">
+    </iframe>
 
 
 *[SVM]: Support Vector Machine
