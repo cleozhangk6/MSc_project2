@@ -3,10 +3,8 @@
 
 ### 3.1.1 Patterns of each Variable
 
-There are six variables of interest after processing of Ethoscope data: `mean velocity` of locomotion, `x` coordinate of the oval mask centre, normalised `phi` angle as well as the width `w`, height `h`, and `area` of the mask. To intuitively look for potential characteristics of each variable, the mean and confidence interval of variable value averaged over 210 fly recordings were computed and plotted over time [(Figure 3)](#fig3). <a onclick="check('__tabbed_1_1')">Figure 3A</a> shows that `mean velocity` is highly cyclical, which is expected as the *Drosophila* activity level follows a circadian rhythm. Fly with a velocity value under 1 is considered to be immobile, and long periods of immobility (i.e., sleep) are typically observed during the mid-day (hour 2-9) and early-night (hour 14-18). Sleep during the day has also been seen in previous fly studies and is known as the mid-day siesta [^14]. Interestingly, the `x` and `phi` variables also display a similar pattern that has lower mean values at these sleep periods <a onclick="check('__tabbed_1_2')">(Figure 3B-C)</a>, although the corresponding degree of uncertainty is much higher. For `w`, `h` and `area`, a sudden change in value when switching to dark is seen <a onclick="check('__tabbed_1_4')">(Figure 3D-F)</a>. This could be the result of a technical defect as the camera becomes less capable of detecting fly boundaries in dim lighting. The overall area may be larger during night than day due to this problem. 
+There are six variables of interest after processing of Ethoscope data: `mean velocity` of locomotion, `x` coordinate of the oval mask centre, normalised `phi` angle as well as the width `w`, height `h`, and `area` of the mask. To intuitively look for potential characteristics of each variable, the mean and confidence interval of variable value averaged over 210 fly recordings were computed and plotted over time [(Figure 3)](#fig3). <a onclick="check('__tabbed_1_1')">Figure 3A</a> shows that `mean velocity` is highly cyclical, which is expected as the *Drosophila* activity level follows a circadian rhythm. Fly with a velocity value under 1 is considered to be immobile, and long periods of immobility (i.e., sleep) are typically observed during the mid-day (hour 2-9) and early-night (hour 14-18). Sleep during the day has also been seen in previous fly studies and is known as the mid-day siesta [^14]. Interestingly, the `x` and `phi` variables also display a similar pattern that has lower mean values at these sleep periods <a onclick="check('__tabbed_1_2')">(Figure 3B&nbsp;</a><a onclick="check('__tabbed_1_3')">& 3C)</a>, although the corresponding degree of uncertainty is much higher. For `w`, `h` and `area`, a sudden change in value when switching to dark is seen <a onclick="check('__tabbed_1_4')">(Figure 3D&nbsp;</a><a onclick="check('__tabbed_1_5')">& 3E&nbsp;</a><a onclick="check('__tabbed_1_6')">& 3F)</a>. This could be the result of a technical defect as the camera becomes less capable of detecting fly boundaries in dim lighting. The overall area may be larger during night than day due to this problem. 
 
-<!-- <a onclick="ci('#__tabbed_1_4')">(Figure 3D-F)</a> -->
-<::before>hiii</::before>
 
 #### <p class="hide-title">F3. Variables over Time</p><a name="fig3"></a>
 === "A) mean velocity"
@@ -89,7 +87,7 @@ To overcome these limitations, another metric for defining sleep sessions was de
 #### <p class="hide-title">F4. Time Series plot</p><a name="fig4"></a>
 <center>
 <iframe src="../graph/plotTS_24.html" class="pts"></iframe>
-<p class="fig-cap">Figure 4. Plotting time series</p>
+<p class="fig-cap"><b>Figure 4. Plotting time series.</b></p>
 </center>
 
 ## 3.3 Classifying Sleep at Different Parts of the Day 
@@ -98,7 +96,7 @@ To overcome these limitations, another metric for defining sleep sessions was de
 
 Sleep sessions that are at least 60-min long were selected from `mean velocity` data, and the first 60-min of which were extracted. This is to allow all time series to be the same length so that classification would not rely on length-dependent features but on more intrinsic properties. A total of 991 time series (M=991) were produced; 388 of which are day-time sleep and 603 of which are night-time sleep, and they were labelled as ‘light’ or ‘dark’ accordingly. HCTSA successfully computed 5202 features (N=5202) on each time series. Thus, a 991 x 5202 (M x N) feature matrix was generated for this two-class data. Classification on the full feature space using a 10-fold linear SVM classifier yielded a mean balanced accuracy of 73.01%. 
 
-To visualise and examine the feature space, dimensionality reduction algorithms including principal component analysis (PCA) and t-distributed stochastic neighbour embedding (t-SNE) were employed. Two-dimensional representations by the two methods are shown in [Figure 5A & 5B](#fig5). Additionally, a linear SVM classification is performed on each dimensional space, and the individual and combined classification accuracies are indicated on the axis.  In both plots, time series data for night-time sleep (red dots) are more spread out than those for day-time sleep (blue dots). Interestingly, night-time sleep data embedded by t-SNE follows a bimodal distribution to some degree, with one of the peak positions being similar to that for day-time sleep data [(Figure 5B)](#fig5). This provides the first evidence that two types of sleep may exist: one occurs mostly at night and the other can occur at both day and night. 
+To visualise and examine the feature space, dimensionality reduction algorithms including principal component analysis (PCA) and t-distributed stochastic neighbour embedding (t-SNE) were employed. Two-dimensional representations by the two methods are shown in [Figure 5](#fig5). Additionally, a linear SVM classification is performed on each dimensional space, and the individual and combined classification accuracies are indicated on the axis.  In the PCA plot, time series data for night-time sleep (red dots) are more spread out than those for day-time sleep (blue dots) <a onclick="check('__tabbed_2_1')">(Figure 5A)</a>. Interestingly, night-time sleep data embedded by t-SNE follows a bimodal distribution to some degree, with one of the peak positions being similar to that for day-time sleep data <a onclick="check('__tabbed_2_2')">(Figure 5B)</a>. This provides the first evidence that two types of sleep may exist: one occurs mostly at night and the other can occur at both day and night. 
 
 #### <p class="hide-title">F5. PCA & T-SNE</p><a name="fig5"></a>
 === "A) PCA"
@@ -108,29 +106,49 @@ To visualise and examine the feature space, dimensionality reduction algorithms 
     <center><iframe src="../graph/plotTSNE_24.html" class="plow"></iframe></center>
     <p class="fig-cap"><b>Figure 5. Low Dimensional Representations of the Feature Space.</b> A) Principal Component Analysis. B) t-distributed Stochastic Neighbour Embedding</p>
 
+To investigate whether classification is driven by certain types of features, HCSTA features were divided into subsets based on the type of properties they measure and then compared by the accuracies of SVM-classification [(Figure 6)](#fig6). Notably, location- and spread-dependent features yielded the highest accuracies. Location-dependent features are those that change under mean shifts of a time series, while spread-dependent features are those that change under rescaling about their mean [^15]. Both types describe basic statistics of the distribution of time series. This indicates that the differences between day-time sleep and night-time sleep may be explained by simple features rather than complex dynamical properties of the time series. 
+
 
 #### <p class="hide-title">F6. Feature Dependence</p><a name="fig6"></a>
-<center><iframe src="../graph/plotDepend_24.html" class="pdep"></iframe></center>
+<center><iframe src="../graph/plotDepend_24.html" height="470" width="800" frameBorder="0"></iframe></center>
 
-#### <p class="hide-title">F7. Top Features</p><a name="fig7"></a>
+Next, each of the 5202 features was individually assessed for their ability to separate the two labelled classes using linear SVM classification. The performance distribution was compared to a set of randomized null features to evaluate the statistical significance of the result [(Figure 7)](#fig7). It is shown that only a relatively small number of features yield high classification accuracies. 
+
+#### <p class="hide-title">F7. Distribution of Accuracies</p><a name="fig7"></a>
+<center><iframe src="../graph/plotPermutation_24.html" height="500" width="1000" frameBorder="0"></iframe></center>
+<p class="fig-cap"><b>Figure 7. Distribution of Accuracies across all features</b></p>
+
+The 16 most discriminative features and their class distributions are visualized in [Figure 8](#fig8). The ‘dark’-labelled data of several features, including `[894] EN_DistributionEntropy_raw_ks`, `[6141] PP_Compare_rav3_kscn_adiff` and `[6253] PP_Compare_resample_2_1_swms`, have exhibited the bimodal distribution that was observed in the previous t-SNE plot <a href="#fig5" onclick="check('__tabbed_2_2')">(Figure 5B)</a>. It can be more clearly seen from these features that the data are roughly organised into two clusters, one containing almost exclusively ‘dark’ labels and the other containing both ‘dark’ and ‘light’ labels. 
+
+
+#### <p class="hide-title">F8. Top Features</p><a name="fig8"></a>
 ![pic](img/plotTopFeatures_24.jpg)
+<p class="fig-cap"><b>Figure 8. Top 16 Features.</b></p>
+
 
 ### 3.3.2 Three-class classification
 
-#### <p class="hide-title">F8. Confusion Matrix</p><a name="fig8"></a>
+Referring back to the `mean velocity` over time plot in Figure 3A, low-activity periods also occur during late-night (hour 20-22) but with a higher average velocity than the early-night sleep. It is therefore hypothesized that the two clusters seen for night-time sleep data may attribute to differences in early-night and late-night sleep. Therefore, the same dataset used in [section 3.3.2](#331-two-class-classification) are re-labelled with ‘light’, ‘dark (ZT_12-18)’ and ‘dark (ZT_18-24)’. The number of time series data for each class is 388, 477 and 126, indicating that sleep take place predominately during the first part of the night. Three-class classification using linear SVM was performed on the 991 x 5202 feature matrix, yielding a mean balanced accuracy of 58.65%. A confusion matrix was created and visualised to determine how well the labels are distinguished from one another [(Figure 9)](#fig9). It is shown that ‘dark (ZT_12-18)’ and ‘light’ are well-discerned with true-positive rates over 70%, but ‘dark (ZT_18-24)’ data is much more ambiguous. 
+
+#### <p class="hide-title">F9. Confusion Matrix</p><a name="fig9"></a>
 <center>
 ![pic](img/plotConfuse_33.png){ width="500" }
 <center>
+<p class="fig-cap"><b>Figure 9. Confusion Matrix.</b></p>
 
-#### <p class="hide-title">F9. PCA & T-SNE</p><a name="fig9"></a>
+
+#### <p class="hide-title">F10. PCA & T-SNE</p><a name="fig10"></a>
 === "A) PCA"
     <iframe src="../graph/plotPCA_33.html" class="plow"></iframe>
+    <p class="fig-cap"><b>Figure 10. Low-dimensional Representation of the full feature space.</b></p>
 === "B) t-SNE"
     <iframe src="../graph/plotTSNE_33.html" class="plow"></iframe>
+    <p class="fig-cap"><b>Figure 10. Low-dimensional Representation of the full feature space.</b></p>
 
 
 
-#### <p class="hide-title">F10. Top Features</p><a name="fig10"></a>
+
+#### <p class="hide-title">F11. Top Features</p><a name="fig11"></a>
 
 === "A) Top 16 Features"
     ![pic](img/plotTopFeatures_33.jpg)
@@ -165,3 +183,4 @@ To visualise and examine the feature space, dimensionality reduction algorithms 
 [^14]: Cao W, Edery I. Mid-day siesta in natural populations of D. melanogaster from Africa exhibits an altitudinal cline and is regulated by splicing of a thermosensitive intron in the period clock gene. BMC Evol Biol. 2017 Jan 23;17(1):32. 
 [^9]: van Alphen B, Yap MHW, Kirszenblat L, Kottler B, van Swinderen B. A Dynamic Deep Sleep Stage in Drosophila. J Neurosci. 2013 Apr 17;33(16):6917–27. 
 [^7]: Cirelli C, Bushey D. Sleep and wakefulness in Drosophila melanogaster. Ann N Y Acad Sci. 2008;1129:323–9.
+[^15]:Fulcher BD, Little MA, Jones NS. Highly comparative time-series analysis: the empirical structure of time series and their methods. J R Soc Interface. 2013 Jun 6;10(83):20130048.
