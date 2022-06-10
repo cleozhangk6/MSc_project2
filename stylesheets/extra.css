@@ -17,11 +17,21 @@ background-color: rgb(43, 155, 70);
         mask-image: var(--md-admonition-icon--pied-piper);
 }
 
+
+html{
+    scroll-behavior: smooth;
+}
+
+a {
+    cursor: pointer;
+}
+
 .fig-cap {
-    font-size: 1em;
+    font-size: 0.9em;
     text-align: justify;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-top: 0;
+    /* margin-left: 2em;
+    margin-right: 2em; */
 }
 
 
@@ -42,16 +52,12 @@ background-color: rgb(43, 155, 70);
 }
 
 .plow {
-    height: 700px;
+    height: 695px;
     width: 700px;
     border: none;
 }
 
-.pdep {
-    height: 500px;
-    width: 1200px;
-    border: none;
-}
+
 
 
 table {
