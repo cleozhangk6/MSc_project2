@@ -151,11 +151,15 @@ Low-dimensional embedding of the three-class feature space are visualized in <a 
 
 #### <p class="hide-title">F11. Top Features</p><a name="fig11"></a>
 
+Each feature is individually assessed, and class distributions of the top 16 performing features are visualised in <a href="#fig11" onclick="check('__tabbed_4_1')">Figure 11A</a>. Distributions of the two ‘dark’ classes are noticeably segregated, and ‘dark (ZT_12-18)’ data points are mostly found in one cluster. This confirms the hypothesis that night-sleep patterns are different between early- and late-night. In addition, most of these features produced similar distributions, with ‘dark (ZT_18-24)’ having the highest mean and ‘dark (ZT_12-18)’ the lowest. To understand the dependencies between top features, a pairwise correlation matrix was computed for the top 40 features <a href="#fig11" onclick="check('__tabbed_4_2')">(Figure 11B)</a>. The matrix was clustered by the absolute correlation coefficient values, leading to only 3 clusters. Hence, these features are largely related to each other and measure similar properties of the time series. The most representative features based on classification performance and feature dependency are: `[17] burstiness_Goh`, `[3262] DN_CompareKSFit_rayleigh_olapint`, `[632] SY_SlidingWindow_ent_ent`, and `[6112] PP_Compare_rav2_kscn_peaksepx`. 
+
 === "A) Top 16 Features"
     ![pic](img/plotTopFeatures_33.jpg)
 === "B) Pairwise Correlation Matrix of 40 Top Features "
     ![pic](img/plotFeatureMatrix_33.jpg){ width="700" }
 
+
+Lastly, the four representative features are individually inspected to understand in detail how each assigns values to time series (Figure 12). Results for `[17] burstiness_Goh` and `[3262] DN_CompareKSFit_rayleigh_olapint` are extremely similar, so `[17] burstiness_Goh` is considered for further interpretation as it produces a higher accuracy. 
 
 #### <p class="hide-title">F12. Features of Interest</p><a name="fig12"></a>
 <!-- <iframe src="../graph/plotSingle17_33.html" height="400" width="500" frameBorder="0">
