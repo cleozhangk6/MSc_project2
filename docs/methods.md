@@ -42,9 +42,6 @@ The `TS_Classify` function was used to classify assigned class labels of a given
 
 The feature sets were compared using the `TS_CompareFeatureSets` function, and top features were probed in detail using several functions including `TS_TopFeatures` and `TS_FeatureSummary`.  Scripts were modified when necessary to obtain appropriate information or visualisations for the analysis. 
 
-</br>
-</br>
-
 
 *[SVM]: Support Vector Machine
 *[kNN]: K-nearest neighbours
