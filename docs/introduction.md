@@ -24,8 +24,9 @@ An ethoscope contains a hardware that video-records the fly in a longitudinal gl
 <p class="fig-cap">
 <b>Figure 1. Fly Behavioural Tracking with Ethoscope.</b> 
 A) Rendered drawing of an Ethoscope device. 
-B) A graphic representation of the oval mask and the variables X, Y, W, H and Phi of a single fly. 
-C) Example output of the Ethoscope. 
+B) A graphic representation of the oval mask and the variables x, y, w, h and phi of a single fly. 
+C) A snippet of the example outputs of the Ethoscope. t is the time variable. 
+
 </p>
 ## 1.3 Time Series Analysis
 
