@@ -498,8 +498,9 @@
 <p class="fig-cap">
 <b>Figure 1. Fly Behavioural Tracking with Ethoscope.</b> 
 A) Rendered drawing of an Ethoscope device. 
-B) A graphic representation of the oval mask and the variables X, Y, W, H and Phi of a single fly. 
-C) Example output of the Ethoscope. 
+B) A graphic representation of the oval mask and the variables x, y, w, h and phi of a single fly. 
+C) A snippet of the example outputs of the Ethoscope. t is the time variable. 
+
 </p>
 <h2 id="13-time-series-analysis">1.3 Time Series Analysis</h2>
 <p>As time series data arises in a wide variety of research fields, ranging from stock market forecasting to heart rate variability analysis, numerous tools have been developed to identify patterns in massive, continuous time series data. However, it would be time-consuming and sometimes insufficient to carry out individual analysis and compare simple statistics on the time series data to look for meaningful patterns, especially when little is known about the underlying data structure. As a result, the highly comparative time series analysis (<abbr title="Highly Comparative Time Series Analysis">HCTSA</abbr>) toolkit is implemented to allow automatic data mining for our fly behavioural time series. <abbr title="Highly Comparative Time Series Analysis">HCTSA</abbr> systematically performs over 7,700 statistical analyses, adopted from literatures of different disciplines, on each time series <sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup>. This creates a M x N feature matrix, where M is the number of labelled time series samples and N is the number of statistical operations (also called time series features). Following the massive feature extraction, machine learning tasks such as principal component analysis and classification algorithms can then be performed to quantify similarity between the differently labelled groups <a href="#fig2">(Figure 2)</a>. </p>
@@ -650,6 +651,12 @@ A set of time-series data is labelled and used as input dataset. HCTSA computes 
       <script src="../assets/javascripts/bundle.a6c66575.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

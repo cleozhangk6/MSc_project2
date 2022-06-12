@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#41-drosophila-activity-follows-circadian-cycle" class="md-skip">
+        <a href="#41-multivariable-ethoscope-data-follows-a-circadian-cycle" class="md-skip">
           Skip to content
         </a>
       
@@ -298,22 +298,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#41-drosophila-activity-follows-circadian-cycle" class="md-nav__link">
-    4.1 Drosophila Activity Follows Circadian Cycle
+  <a href="#41-multivariable-ethoscope-data-follows-a-circadian-cycle" class="md-nav__link">
+    4.1 Multivariable Ethoscope Data Follows a Circadian Cycle
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-simple-features-spread-dependent" class="md-nav__link">
-    4.2 Simple features (spread-dependent)
+  <a href="#42-sleep-depth-and-burstiness-of-activity" class="md-nav__link">
+    4.2 Sleep Depth and Burstiness of Activity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#43-sleep-are-differentiated-between-midday-early-night-and-late-night" class="md-nav__link">
-    4.3 Sleep are differentiated between midday, early-night, and late-night
+  <a href="#43-limitations-and-aspects-for-improvements" class="md-nav__link">
+    4.3 Limitations and Aspects for Improvements
   </a>
   
 </li>
@@ -381,22 +381,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#41-drosophila-activity-follows-circadian-cycle" class="md-nav__link">
-    4.1 Drosophila Activity Follows Circadian Cycle
+  <a href="#41-multivariable-ethoscope-data-follows-a-circadian-cycle" class="md-nav__link">
+    4.1 Multivariable Ethoscope Data Follows a Circadian Cycle
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-simple-features-spread-dependent" class="md-nav__link">
-    4.2 Simple features (spread-dependent)
+  <a href="#42-sleep-depth-and-burstiness-of-activity" class="md-nav__link">
+    4.2 Sleep Depth and Burstiness of Activity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#43-sleep-are-differentiated-between-midday-early-night-and-late-night" class="md-nav__link">
-    4.3 Sleep are differentiated between midday, early-night, and late-night
+  <a href="#43-limitations-and-aspects-for-improvements" class="md-nav__link">
+    4.3 Limitations and Aspects for Improvements
   </a>
   
 </li>
@@ -417,16 +417,67 @@
 
   <h1>4. Discussion</h1>
 
-<h2 id="41-drosophila-activity-follows-circadian-cycle">4.1 Drosophila Activity Follows Circadian Cycle</h2>
-<p>Sleep during the day has also been seen in previous fly studies and is known as the mid-day siesta <sup id="fnref:14"><a class="footnote-ref" href="#fn:14">1</a></sup>.</p>
-<h2 id="42-simple-features-spread-dependent">4.2 Simple features (spread-dependent)</h2>
-<p>Burstiness</p>
-<h2 id="43-sleep-are-differentiated-between-midday-early-night-and-late-night">4.3 Sleep are differentiated between midday, early-night, and late-night</h2>
+<h2 id="41-multivariable-ethoscope-data-follows-a-circadian-cycle">4.1 Multivariable Ethoscope Data Follows a Circadian Cycle</h2>
+<p>Results from <a href="../results/">section 3.1.1</a> have shown that all Ethoscope variables follow a circadian cycle. The <code>mean velocity</code> variable directly relates to the activity level (or mobility), and flies with <code>mean velocity</code> below a certain threshold is generally considered as asleep.  It is hence found that <em>Drosophila</em> typically sleep during mid-day and the first few hours of the night. Sleep during the day has also been seen in previous fly studies and is known as the mid-day siesta <sup id="fnref:15"><a class="footnote-ref" href="#fn:15">1</a></sup>, which is thought to be an adaptive response to minimize exposure to heat  <sup id="fnref:16"><a class="footnote-ref" href="#fn:16">2</a></sup> <sup id="fnref:17"><a class="footnote-ref" href="#fn:17">3</a></sup> <sup id="fnref:18"><a class="footnote-ref" href="#fn:18">4</a></sup>. Flies also exhibit sleep behaviours during late-night (around hour 20-22) followed by a few hours of low-level activities. </p>
+<p>Using the <code>mean velocity</code> as a reference, it is seen that <code>x</code> and <code>phi</code> also follow a similar pattern. Flies tend to be located at <code>x</code> positions around 0.2-0.3 during mid-day siesta and early-night sleep, which is roughly where the food is placed. It is likely because sleep happens after feeding, as food consumption has been thought to induce sleepiness <sup id="fnref:19"><a class="footnote-ref" href="#fn:19">5</a></sup>. The <code>phi</code> angle is also generally lower (i.e., closer to horizontal) during sleep and consistently higher when active, which is likely due to increased turning when walking back and forth in the tube. Size-related variables including <code>w</code>, <code>h</code> and <code>area</code> all have slightly decreased values during mid-day siesta. Shrinking in size due to fly crouching down when resting has also been observed by previous research <sup id="fnref:20"><a class="footnote-ref" href="#fn:20">6</a></sup>. However, these measures during the night are less reliable for interpretation in this study as the oval masks are not well assigned in dim lights. </p>
+<p>Although the <code>x</code> and <code>phi</code> variables may be useful in distinguishing sleep and awake states, they seem to be less discriminable when trying to identify deep and light sleep stages according to the classification results in <a href="../results/">section 3.1.2</a>. This study therefore focused on univariate analysis of the <code>mean velocity</code> variable to explore potential indicators of sleep stages. </p>
+<h2 id="42-sleep-depth-and-burstiness-of-activity">4.2 Sleep Depth and Burstiness of Activity</h2>
+<p>In this study, a different way of identifying sleep was developed which allows short bursts of activity during sleep. This is to potentially include more light sleep, that has higher activity levels, into our time series data for analysis. Sleep sessions are extracted from different parts of the day using this method, and results from <a href="../results/">section 3.3.2</a> showed that sleep can be relatively well-differentiated between mid-day, early-night and late-night. Time series for mid-day and early-night sleep are generally organised into single clusters, while late-night sleep data is more distributed with a range of characteristics. The hypothesis is that the majority of sleep during early-night is at a deeper stage and the majority for mid-day is at a lighter stage, and both stages can occur during late-night. </p>
+<p>Investigation of the time series features in <a href="../results/">section 3.3.2</a> revealed that differences between the three classes may be explained by a small amount of simple, location- and spread-dependent features. These top features are also highly correlated and can be narrowed down to a single representative feature: burstiness. Burstiness describes the intermittent short timeframes of activity following long periods of inactivity <sup id="fnref:21"><a class="footnote-ref" href="#fn:21">7</a></sup>. It is often measured by the Fano factor which is a ratio between the variance and mean of burst counts. The orginal burstiness statistics is proposed by Goh and Barabasi <sup id="fnref:22"><a class="footnote-ref" href="#fn:22">8</a></sup> and is defined as</p>
+<div class="arithmatex">\[
+\Delta \equiv \frac{\operatorname{sgn}\left(\sigma_{\tau}-m_{\tau}\right)}{2} \int_{0}^{\infty}\left|P(\tau)-P_{\mathrm{P}}(\tau)\right| d \tau
+\]</div>
+<p>where <span class="arithmatex">\(\Delta\)</span> is the burstiness parameter, <span class="arithmatex">\(\operatorname{sgn}\)</span> is a function that extracts the sign of a number, <span class="arithmatex">\(m_{T}\)</span> and <span class="arithmatex">\(\sigma_{T}\)</span> are the mean and standard deviation of <span class="arithmatex">\(P(\tau)\)</span>, <span class="arithmatex">\(P(\tau)\)</span> is the given time series, and <span class="arithmatex">\(P_{\mathrm{P}}(\tau)\)</span> is a random, time-independent series that follows an exponential distribution. This equation is adapted by Fulcher and Jones (12) and incorporated into HCTSA with equation</p>
+<div class="arithmatex">\[
+B=\frac{\sigma_{\tau}-m_{\tau}}{\sigma_{\tau}+m_{\tau}}
+\]</div>
+<p>where <span class="arithmatex">\(B\)</span> is the burstiness parameter, <span class="arithmatex">\(m_{T}\)</span> and <span class="arithmatex">\(\sigma_{T}\)</span> are the mean and standard deviation of the time series. For the three classes, late-night sleep yields the highest mean burstiness, and early-night sleep yields the lowest. This suggests that early-night sleep time series have fewer significantly enhanced activity levels, which corresponds to the reduced mobility known for deep sleep <sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup> <sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup>. In addition, sleep has also been associated to increased arousal thresholds (or decreased sensory responsiveness) <sup id="fnref2:20"><a class="footnote-ref" href="#fn:20">6</a></sup> <sup id="fnref:23"><a class="footnote-ref" href="#fn:23">11</a></sup>, and previous work by the Gilestro Lab Group has shown that late-night sleep exhibits the greatest response to stimuli compared to mid-day siesta and early-night sleep <sup id="fnref:24"><a class="footnote-ref" href="#fn:24">12</a></sup>. This is concordant to the fact that late-night sleep has the highest burstiness. However, responsiveness of early-night sleep seems to be greater than siesta, which contradicts the order of their burstiness values. More work needs to be carried out to determine whether the arousal threshold is correlated to burstiness of activity during sleep. Overall, burstiness may serve as a possible indicator for sleep depth and help to distinguish sleep stages. </p>
+<h2 id="43-limitations-and-aspects-for-improvements">4.3 Limitations and Aspects for Improvements</h2>
+<p>The use of HCTSA for time series analysis has greatly facilitated our exploration for nuances in sleep. However, it also posed many restrictions to the analysis, particularly during the data curation process. First, most HCTSA operations prefers longer time series as inputs, and so sleep sessions are taken in windows of 60 minutes using the more forgiving sleep metric. This excludes shorter sleep periods which may be more typical for <em>Drosophila</em> sleep. One solution is to obtain per-second data from the Ethoscope database but its downloading and analysis would be more time-consuming and not suitable for this short exploratory project.  Secondly, it is known for mammals that sleep stages exists in cycles and have varying lengths <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">13</a></sup> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">14</a></sup>, but HCTSA operations return single statistical values for a given time series which may overlook such details. Lastly, HCTSA only allows single-variate analysis, and multivariable analysis that includes other Ethoscope parameters could potentially improve the classification rate. </p>
 <div class="footnote">
 <hr />
 <ol>
-<li id="fn:14">
-<p>Cao W, Edery I. Mid-day siesta in natural populations of D. melanogaster from Africa exhibits an altitudinal cline and is regulated by splicing of a thermosensitive intron in the period clock gene. BMC Evol Biol. 2017 Jan 23;17(1):32.&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li id="fn:15">
+<p>Cao W, Edery I. Mid-day siesta in natural populations of D. melanogaster from Africa exhibits an altitudinal cline and is regulated by splicing of a thermosensitive intron in the period clock gene. BMC Evol Biol. 2017 Jan 23;17(1):32.&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>Majercak J, Sidote D, Hardin PE, Edery I. How a circadian clock adapts to seasonal decreases in temperature and day length. Neuron. 1999 Sep;24(1):219–30.&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>Rensing L, Ruoff P. Temperature effect on entrainment, phase shifting, and amplitude of circadian clocks and its molecular bases. Chronobiol Int. 2002 Sep;19(5):807–64.&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p>Sweeney BM, Hastings JW. Effects of temperature upon diurnal rhythms. Cold Spring Harb Symp Quant Biol. 1960;25:87–104.&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:19">
+<p>Murphy KR, Deshpande SA, Yurgel ME, Quinn JP, Weissbach JL, Keene AC, et al. Postprandial sleep mechanics in Drosophila. Scott K, editor. eLife. 2016 Nov 22;5:e19334.&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:20">
+<p>Hendricks JC, Finn SM, Panckeri KA, Chavkin J, Williams JA, Sehgal A, et al. Rest in Drosophila Is a Sleep-like State. Neuron. 2000 Jan;25(1):129–38.&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:20" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p>Lambiotte R, Tabourier L, Delvenne JC. Burstiness and spreading on temporal networks. Eur Phys J B. 2013 Jul 15;86(7):320.&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>Goh KI, Barabási AL. Burstiness and memory in complex systems. EPL Europhys Lett. 2008 Jan;81(4):48002.&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>van Alphen B, Yap MHW, Kirszenblat L, Kottler B, van Swinderen B. A Dynamic Deep Sleep Stage in Drosophila. J Neurosci. 2013 Apr 17;33(16):6917–27.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>van Alphen B, Semenza ER, Yap M, van Swinderen B, Allada R. A deep sleep stage in Drosophila with a functional role in waste clearance. Sci Adv. 2021 Jan 20;7(4):eabc2999.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>Shaw PJ, Cirelli C, Greenspan RJ, Tononi G. Correlates of sleep and waking in Drosophila melanogaster. Science. 2000 Mar 10;287(5459):1834–7.&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p>French AS, Geissmann Q, Beckwith EJ, Gilestro GF. Sensory processing during sleep in Drosophila melanogaster. Nature. 2021 Oct;598(7881):479–82.&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:1">
+<p>Blake H, Gerard RW. Brain potentials during sleep. Am J Physiol-Leg Content. 1937 Jul 31;119(4):692–703.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Wolpert EA. A Manual of Standardized Terminology, Techniques and Scoring System for Sleep Stages of Human Subjects. Arch Gen Psychiatry. 1969 Feb 1;20(2):246–7.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 14 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -524,6 +575,12 @@
       <script src="../assets/javascripts/bundle.a6c66575.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
