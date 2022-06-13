@@ -25,7 +25,7 @@ An ethoscope contains a hardware that video-records the fly in a longitudinal gl
 <b>Figure 1. Fly Behavioural Tracking with Ethoscope.</b> 
 A) Rendered drawing of an Ethoscope device. 
 B) A graphic representation of the oval mask and the variables x, y, w, h and phi of a single fly. 
-C) A snippet of the example outputs of the Ethoscope. t is the time variable. 
+C) A screenshot of example outputs of the Ethoscope. t is the time variable. 
 
 </p>
 ## 1.3 Time Series Analysis
@@ -39,10 +39,12 @@ As time series data arises in a wide variety of research fields, ranging from st
 A set of time-series data is labelled and used as input dataset. HCTSA computes over 7,000 operations on each time-series data to create a MxN feature matrix (M = number of timeseries, N = number of operations). After feature extraction, statistical learning tools such as dimensionality reduction and classification algorithms can be used to analyse the data.
 </p>
 
+</br>
 In addition to HCTSA, it is also possible to compute a reduced number of operations using Canonical Time-series Characteristics (Catch22), a toolbox that has preselected 22 most representative time-series features from the HCTSA library [^13]. This significantly decreases the computation time. Therefore, Catch22 is carried out first in every analysis, and HCSTA is performed if the Catch22 yields interesting results. 
 
 An advantage of using HCTSA compared to other methods such as deep neutral network on time series classification is that HCTSA encompasses interpretable and well-documented features. This allows useful understanding of the factors that potentially differentiates deep and light sleep in *Drosophila*. It also provides scope for incorporating a simplistic algorithm to the Ethoscope software that can apply the selected features on newly recorded time series data to indicate sleep stage. 
 
+</br>
 *[EEG]: Electroencephalogram
 *[REM]: Rapid Eye Movement
 *[PE]: Proboscis Extension

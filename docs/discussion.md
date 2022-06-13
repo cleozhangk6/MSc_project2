@@ -28,7 +28,7 @@ where $B$ is the burstiness parameter, $m_{T}$ and $\sigma_{T}$ are the mean and
 
 The use of HCTSA for time series analysis has greatly facilitated our exploration for nuances in sleep. However, it also posed many restrictions to the analysis, particularly during the data curation process. First, most HCTSA operations prefers longer time series as inputs, and so sleep sessions are taken in windows of 60 minutes using the more forgiving sleep metric. This excludes shorter sleep periods which may be more typical for *Drosophila* sleep. One solution is to obtain per-second data from the Ethoscope database but its downloading and analysis would be more time-consuming and not suitable for this short exploratory project.  Secondly, it is known for mammals that sleep stages exists in cycles and have varying lengths [^1] [^2], but HCTSA operations return single statistical values for a given time series which may overlook such details. Lastly, HCTSA only allows single-variate analysis, and multivariable analysis that includes other Ethoscope parameters could potentially improve the classification rate. 
 
-
+</br>
 
 [^15]: Cao W, Edery I. Mid-day siesta in natural populations of D. melanogaster from Africa exhibits an altitudinal cline and is regulated by splicing of a thermosensitive intron in the period clock gene. BMC Evol Biol. 2017 Jan 23;17(1):32.
 [^16]: Majercak J, Sidote D, Hardin PE, Edery I. How a circadian clock adapts to seasonal decreases in temperature and day length. Neuron. 1999 Sep;24(1):219–30.

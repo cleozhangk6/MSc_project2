@@ -194,6 +194,7 @@ Lastly, the four representative features are individually inspected to understan
 
 `[17] burstiness_Goh` and `[3262] DN_CompareKSFit_rayleigh_olapint` are both location- and spread dependent features that measure time series distribution, and their resulting plots are extremely similar <a onclick="check('__tabbed_5_1')">(Figure 12A&nbsp;</a><a onclick="check('__tabbed_5_2')">& 12B)</a>. `[632] SY_SlidingWindow_ent_ent` is a measure of stationarity which slides a window along the time series, calculates the distribution entropy of each window and outputs an overall histogram entropy value <a onclick="check('__tabbed_5_3')">(Figure 12C)</a>. Therefore, it is also a measure of distribution and is highly correlated to `[17] burstiness_Goh`. On the other hand, `[6112] PP_Compare_rav2_kscn_peaksepx` is a combination of `[3262] DN_CompareKSFit_rayleigh_ olapint` and `[632] SY_SlidingWindow_ent_ent`, which applies a running average transformation (window length = 2) to the time series and quantifies differences between the kernel-smoothed and fitted distribution of the processed data <a onclick="check('__tabbed_5_4')">(Figure 12D)</a>. As a result, all four operations evaluates similar properties of the time series. Of which, `[17] burstiness_Goh` produces the highest classification accuracy and so is considered for further interpretation in the [Discussion](discussion.md) page.
 
+</br>
 *[SVM]: Support Vector Machine
 *[kNN]: K-nearest neighbours
 *[HCTSA]: Highly Comparative Time Series Analysis
